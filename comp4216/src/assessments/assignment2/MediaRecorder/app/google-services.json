@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "196952167942",
+    "project_id": "media-recorder-6e884",
+    "storage_bucket": "media-recorder-6e884.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196952167942:android:e8c26fb8daf51692ca1587",
+        "android_client_info": {
+          "package_name": "comp5216.sydney.edu.au.mediarecorder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrtldSlMN72qfHwUvPuLoRZVrioT-L-sE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

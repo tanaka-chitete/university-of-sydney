@@ -1,0 +1,134 @@
+%------------------------ Preamble and bibliography resources
+\documentclass[12pt,oneside]{book}
+\input{frontmatter/preamble} 
+\usepackage{style/title}[partialsubject]
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{syntax}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{cleveref}
+\DeclareCaptionType{Grammar}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{lipsum}
+%% Grammars
+
+\def\term#1{\texttt{'\textbf{#1}'}}
+\newcommand{\termC}[2]{\texttt{'\textbf{\color{#2}#1}'}}
+% \def\term#1{\textbf{#1}}
+\def\nonterm#1{\textnormal{\emph{#1}}}
+\def\regex#1{\texttt{{\color{blue}/}#1{\color{blue}/}}}
+\def\expandsto{\(\rightarrow{}\)}
+
+\definecolor{nontermcolor}{rgb}{0.4, 0.05, 0.0} % dark orange
+\definecolor{absnontermcolor}{rgb}{0.4, 0.5, 0.0} % light green
+\definecolor{evokcolor}{rgb}{0.8, 0.05, 0.1}    % orange
+\definecolor{incorrectcolor}{rgb}{0.5, 0.0, 0.13}
+\definecolor{incompletecolor}{rgb}{0.0, 0.0, 0.55}
+%\definecolor{incompletecolor}{rgb}{0.12, 0.3, 0.17}
+\definecolor{validcolor}{rgb}{0.33, 0.42, 0.18} %  {0.0, 0.28, 0.67}
+%\definecolor{retcolor}{rgb}{0.43, 0.21, 0.1}
+\definecolor{retcolor}{rgb}{0.65, 0.16, 0.16}
+\definecolor{ipatterncolor}{rgb}{0.0, 0.5, 0.4} % cyan?
+\definecolor{termcolor}{rgb}{0.0, 0.05, 0.4}    % dark blue
+\definecolor{regexcolor}{rgb}{0.1, 0.3, 0.1}    % dark green
+
+\def\term#1{\texttt{\color{termcolor}'\textbf{#1}'}}
+\def\nonterm#1{{\color{nontermcolor}$\langle$\textnormal{\emph{#1}}$\rangle$}}
+\def\absnonterm#1{{\color{absnontermcolor}$\langle$\textnormal{\emph{#1}}$\rangle$}}
+\def\expandsto{::=}
+
+
+% Grammar Literals
+\renewcommand{\ulitleft}{\normalfont\ttfamily}
+\renewcommand{\litleft}{\bgroup\color{termcolor}`\ulitleft}
+\renewcommand{\litright}{\ulitright'\egroup}
+
+% Grammar Nonterminals
+\renewcommand{\syntleft}{\bgroup\color{nontermcolor}$\langle$\normalfont\itshape}
+\renewcommand{\syntright}{$\rangle$\egroup}
+
+% Grammar Spacing
+\grammarparsep 3pt plus 1pt minus 1pt
+
+% Our grammars: indented, smaller
+\newenvironment{densegrammar}{%
+\begin{small}
+%\setlength{\parsep}{0pt}
+%\setlength{\itemsep}{0pt}
+\begin{grammar}%
+}%
+{%
+\end{grammar}%
+\end{small}%
+}
+\usepackage{xspace}
+
+
+\usetikzlibrary{positioning, fit, shapes.multipart, shapes.geometric, arrows, arrows.meta, bending, matrix}
+\lstset{breaklines=true}
+
+%\makenomenclature
+
+% Add your bibtex file here
+\addbibresource{bibliography.bib}
+
+%------------------------ Main Document --------------------------
+\begin{document}
+	
+	%-------------- Information For The Title Page
+	\title{Title Here\\
+ \vspace{1cm}
+ \normalsize \the\year{} [Kind] Research Program Thesis Proposal}
+	\author{[Author Name]}
+	\date{\today} 
+	% \degree{Degree}
+    % \subject{2022-23 Summer Vacation Research Internship Program}
+	\supervisor[1]{Dr. Rahul Gopinath} % For multiple supervisors, \supervisor[2]{Supervisor 1 & 2}
+	\school{Computer Science}
+	
+	%-------------- Front Matter
+	\frontmatter
+	\maketitle
+	%\declaration
+	
+	\include{frontmatter/abstract}
+	%\include{frontmatter/acknowledgments}
+	
+	%-------------- Table of contents
+	\cleardoublepage
+	\phantomsection \pdfbookmark[0]{Contents}{Contents} 
+	\tableofcontents
+	\addcontentsline{toc}{chapter}{\listfigurename}
+	\listoffigures
+	\addcontentsline{toc}{chapter}{\listtablename}
+	\listoftables
+	
+	%\include{frontmatter/nomenclature}
+	%\printnomenclature
+	
+	%-------------- Chapters
+	\cleardoublepage
+	\mainmatter
+    \include{chapters/Introduction}
+     \include{chapters/Contract}
+    \include{chapters/Background}
+    \include{chapters/Conclusion}
+	
+	%-------------- Appendices
+	\cleardoublepage
+	\appendix
+%	\include{appendices/appendix1}
+	
+	%-------------- Bibliography
+	\cleardoublepage
+	\phantomsection  
+	\addcontentsline{toc}{chapter}{Bibliography}              
+	\printbibliography
+
+\end{document}  
+

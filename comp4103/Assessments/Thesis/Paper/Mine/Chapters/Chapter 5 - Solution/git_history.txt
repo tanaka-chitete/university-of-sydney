@@ -1,0 +1,177 @@
+* 648c14d fix: update README.md instructions
+* 975eb13 fix: update paths
+* 2916c14 chore: reformat template.html
+* 7319dda chore: rewrite README.md
+*   53bc785 Merge pull request #4 from tanaka-chitete/feat/serialise-deserialise-objects
+|\  
+| * ab16841 chore: re-run introduction_to_pandas.html
+| * 95eb0c1 fix: un-escape HTML entities
+| * 4ca0d66 chore: add /res to repository
+| * a4b21cd refactor: rename directories
+| * 249a90e styling: remove padding from <dl>, <ol>, and <ul>; and remove underline from <a>
+| * 5fcbcaa feat: create example environment
+| * aa56f97 feat: create example environment
+| * f5394e5 fix: prevent Python from attempting to pickle JsProxy object
+| * 6a135ca fix: resolve broken comment
+| * 3e6edf0 styling: modify header and p padding
+| * 1f15bbd feat: fix the navbar to the top of the page
+| * 1ff4d12 fix: resolve save command bug
+| * 74732d8 refactor: modify serialiseObjects()
+| * 7de7591 wip: serialise/deserialise objects
+| * 9ddf906 wip: serialise/deserialise objects
+| * 708d0a5 refactor: embed micropip, packaging, and cloudpickle
+| * 2b1afff wip: serialise/deserialise objects
+| * 1edf7ab wip: serialising/deserialising objects
+| * d731043 refactor: embed micropip and cloudpickle
+|/  
+* 8a660e6 chore: delete /src
+*   e335520 Merge pull request #3 from tanaka-chitete/chore/refactor
+|\  
+| * a620a72 refactor: rename directories
+| * 2f8b1fd refactor: delete unneccessary operations
+| * e4952af refactor: edit saveEnvironment()
+| * 5ad33c7 refactor: delete editAllText()
+| * ef82837 refactor: reorganise functions
+| * 41139d7 refactor: delete mountDirectory()
+| * 759f3b7 refactor: delete restoreNotebook()
+| * 38be621 refactor: edit readyEnvironment()
+| * e66305c refactor: initialise the environment upon notebook open
+| * c8d7e16 chore: refactor deserialiseObjects()
+| * 8a054ac chore: embed FileSaver.js into template.html
+| * 5786542 refactor: remove installRequirements()
+| * 34b23bd refactor: remove validateRequirements()
+| * aaf2968 feat: validate requirements
+| * d7829d3 fix: error-handle loadRequirements
+|/  
+*   91590f2 Merge pull request #2 from tanaka-chitete/feat/embed-requirements
+|\  
+| * 8cbe47f chore: add data-filename tags to each package div
+| * 33171ff wip: embed requirements
+| * 4248052 refactor: refactor bfs()
+| * 30c162d refactor: print embedding status to the terminal
+| * 6782a01 feat: embed requirements into environment
+| * a195a5e wip: embed requirements into environment
+| * fd5764b wip: embed requirements into environment
+| * 6a858fc wip: embed package into new environment
+| * 3c6a22e refactor: rename constants.py to repodata.py
+| * e646270 refactor: restructure directories
+| * 068d10b wip: add <div> tags for packages
+| * b5dabca refactor: rename PyodideJSManager class to PyodideManager
+| * 9f26851 refactor: embed repodata.json in a <div>
+| * 1428652 refactor: embed pyodide.asm.wasm in a <div>
+| * d47661b refactor: embed python_stdlib.zip in a <div>
+| * 92e55cb wip: embed requirements into environments
+|/  
+* 755f1dc --amend
+* 3212984 --amend
+* 79cfc4d chore: implement README.md
+*   3c2a982 Merge pull request #1 from tanaka-chitete/feat/run-all-code-cells
+|\  
+| * 5c549ae feat: run multiple code cells; preview/edit multiple text cells
+| * f6595c1 feat: make requirements.txt optional
+|/  
+* e235464 chore: add comments for various options
+* 5195d31 refactor: position button icons at the top
+* 9d5682c fix: handle error that occurs when reading an empty requirements.txt
+* b927f49 chore: add requirement.txt to .gitignore
+* 32ed1f5 feat: implement error-handling for 'Restore notebook'
+* 7081f88 feat: implement error-handling for "Initialise notebook"
+* 16be4b6 fix: resolve bug with 'Checkpoint notebook' operation
+* 6b817aa fix: prevent the user from triggering the save shortcut until the notebook has been initialised/restored
+* 46db0e5 refactor: rename operations
+* 1f76cca chore: implement error-handling for 'Checkpoint notebook' operation
+* 8d590e5 chore: implement error-handling for 'Mount directory' operation
+* 738b438 feat: pickle only user-defined variables
+* 1a04195 wip: dynamically enable/disable operations
+* 1fb5bc4 feat: restore notebook
+* 8125726 wip: save a notebook
+* bd7a8ca chore: delete implementation of FileSaver.js
+* 9e93143 feat: show dialog when saving a file
+* 39728ce chore: rename existing files and delete unnecessary files
+* d9d2138 Squash multiple commits to push to remote
+* 57dfddf feat: install requirements
+* f3a570c refactor: load micropip and packaging dynamically
+* e896aeb feat: load packages
+* 1ad5944 feat: save and open notebooks
+* 67f0184 wip: saving and opening a notebook
+* 912cd0c refactor: disable modal
+* bbe1f8f chore: rename temp.html to Template.html
+* a54df30 rename template.html to temp.html
+* f9ab757 fix: prevent filename input form from reloading the page
+* d3f99ba feat: add save notebook modal
+* 3b6f697 chore: embed FileSaver.js within Template.html
+* 47c9227 chore: rename template.html to Template.html
+* a01fefc chore: rename untitled.html to template.html
+* 04ef88a feat: save notebook contents
+* 5286ace chore: rename index.html to untitled.html
+* 7694da8 chore: delete README.md
+* 4057b0b chore: log all operations
+* cbc3e00 feat: render markdown
+* 6ea0ba7 chore: refactor deleteCell()
+* 2bc5650 feat: delete selected cell
+* dba5ee9 fix: change indent unit from 2 to 4 spaces
+* 55139bf fix: set selected cell when adding a new cell
+* 139edee feat: highlight selected cell
+* b235d55 fix: render markdown when user clicks away from text area
+* d0bafc7 chore: rename containers to cells; select/unselect cells; rename python/markdown to code/text; refactor using hooks
+* 9f4b5cc chore: refactor add cell functions to use DOM insertion hooks
+* dd64d17 chore: update python container construction
+* 3e71484 chore: update CSS styling
+* b292254 chore: delete implementation of placeholder CodeMirror plugin
+* 1cce250 chore: add comments, rename variables, and reorganise functions
+* 5d10084 refactor: delete initialsePythonEditors()
+* d256445 refactor: delete initialseMarkdownEditors()
+* 81448a0 feat: initialise markdown editors when opening a notebook
+* 98b3a2f feat: initialise python editors when opening a notebook
+* cc70235 fix: display print() calls on the page
+* 50f3f9a style: update python and markdown cells
+* 9c49655 refactor: simplify markdown container structure
+* 55d0282 refactor: add event listeners to python and markdown cells using addEventListener()
+* 1cd3aed fix: make page full size of viewport
+* dda884e refactor: embed placeholder.js within index.html
+* 36a406d feat: add placeholder text
+* f69adb8 feat: add update selected cell event listener to markdown cells
+* f8c947a fix: resolve container–editor referencing issues
+* 504d38c wip: add text cell
+* 31c02db fix: prevent python input area overflow
+* 50b6c24 feat: add code cell above or below
+* 1fb33a1 fix: add cell when no cell is selected
+* 4942c6c refactor: construct code cell using pythonContainer.innerHTML, instead
+* 04208bc feat: add code cells dynamically
+* 860a594 wip: add onclick events for toolbar operations
+* ff3e58e chore: rename code HTML elements
+* 89deb8c wip: add skeletal update selected cell event listener
+* 53846af feat: initialise multiple python editors
+* 83b4c11 chore: use dropdowns in toolbar
+* eca4ce8 fix: fix CSS styling for body
+* e87436b fix: fix CSS styling for code input container
+* 8387aab feat: add 'Run' button
+* 83e156b feat: add skeletal toolbar
+* 5ed0a81 feat: render markdown
+* 317356d chore: write comments about self-implemented code
+* ae0a904 chore: write comments about external resources
+* 54864e7 chore: implement initialisation code within functions
+* 3e3dbc2 fix: automatically resize markdown input and output areas
+* 02b7e80 feat: position markdown input and output to be side-by-side
+* a566053 chore: embed bootstrap resources within index.html
+* 0867236 chore: download bootstrap resources
+* 1f42320 chore: embed marked.min.js within index.html
+* fd28088 fix: disable marked console warnings
+* 9e70fec wip: render markdown
+* 21427fd wip: render markdown
+* da6d593 chore: refactor source code for cleanliness
+* c7f06a4 wip: embed pyodide resources within index.html
+* 3a04db2 chore: embed python_stdlib.zip within index.html
+* 1dc97dc chore: embed repodata.json within index.html
+* 601bbc8 fix: load pyodide.asm.js using internal class
+* e0a5666 chore: embed pyodide.asm.js within index.html
+* d7b1b2e chore: embed pyodide.js within index.html
+* 2fb8c21 feat: run python code
+* 67d1736 wip: run python code
+* b0055cf chore: embed codemirror.js within index.html
+* ab415ba chore: embed markdown.js within index.html
+* 5674246 chore: embed python.js within index.html
+* 1b7577f chore: embed codemirror.css within index.html
+* 7f9af43 feat: dynamically highlight markdown text
+* 79ff732 feat: dynamically highlight python code
+* 49a0f6c Initial commit

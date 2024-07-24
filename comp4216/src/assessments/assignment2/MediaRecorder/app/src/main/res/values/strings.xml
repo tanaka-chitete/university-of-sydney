@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MediaAccess</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="load_photo">Load Photo</string>
+    <string name="record_video">Record Video</string>
+    <string name="load_video">Load Video</string>
+    <string name="synchronise">Synchronise</string>
+</resources>

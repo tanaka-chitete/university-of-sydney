@@ -1,0 +1,50 @@
+---
+Achieving the saving and restoration of Jupyter Notebooks has numerous benefits
+
+
+There are several challenges for achieving reproducibility within Jupyter-based environments and their associated workflows. 
+
+In comparison to traditional 
+
+Restoring an ongoing notebook can be achieved only after the following requirements are satisfied:
+
+By nature, Jupyter Notebooks are shareable artefacts. However, their multitude of separate components can severely hinder–if not, completely prevent–the process of restoring the notebook, at all. Restoring a notebook involves the satisfaction of each of the following requirements:
+1. The code within the notebook is portable.
+2. Python run-times are identical.
+3. Replicate referenced local data
+4. External library dependencies should be replicated or installed if missing
+5. Python run-time variables should be reinitialised
+However, their highly-complex architecture presents several challenges for achiev-
+ing complete reproducibility.
+---
+Perhaps the most critical aspect of achieving complete reproducibility with Jupyter Notebooks is the challenge of saving and restoring the notebook itself. Without being able to save and restore the notebook, sharing the notebook and facilitating collaboration becomes impossible.
+---
+Essentially, in order to save and restore a partially computed notebook, we need
+means to capture the notebook state, archive the state in some manner, and finally,
+reinstate the archived notebook state.
+---
+When examined in detail, there are several challenges associated with replicating
+the state of a notebook. Not only must the associated code be fully replicated, so to
+must the underlying Python run-time environment. Concerning the environment,
+subtle problems arise in replicating referenced data, resolving external library de-
+pendencies, and re-initialising variable states. 
+
+Existing literature has achieved state
+replication in a variety of different manners with careful consideration to specific
+contexts of use. 
+
+The prevailing methods are either snapshot-based or provenance-
+based. 
+
+Snapshot-based solutions focus on capturing notebook state at a specific
+point in time during the computational workflow. 
+
+Provenance-based solutions, on
+the other hand, focus on capturing information pertaining to the entire compu-
+tational workflow–inputs, processes, and outputs–coupled with documenting their
+evolution throughout the lifetime of the entire experiment. Regardless, achieving
+replicability, irrespective of the means, represents a crucial first step towards fur-
+thering reproducible science with Jupyter Notebooks.
+---
+To achieve the absolute state capture of a notebook, we primariliy utilised the Jupyter Magic Extension support provided by the IPython kernel. In addition, we made modifications to the IPython kernel to integrate with external services to capture information that cannot be directly captured from the kernel itself.
+---

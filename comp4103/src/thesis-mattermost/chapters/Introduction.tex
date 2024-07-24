@@ -1,0 +1,46 @@
+\chapter{Introduction}\label{chapter:intro}
+
+\lipsum[20]
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+\small
+\center
+\begin{grammar}
+<START> ::= <paren*>
+
+<paren*> ::= <paren><paren*>
+\alt $\epsilon$
+
+<paren>  ::= \term{(} <paren*> \term{)}
+\end{grammar}
+\caption{A parenthesis grammar}
+\label{fig:parenthesis}
+\end{wrapfigure}
+\lipsum[10]~\cite{Gopinath2019} \lipsum[100] (such as \Cref{fig:parenthesis}). \lipsum[100]. \Cref{fig:grammarfuzzer} shows such a tool.
+
+A key issue with  ...
+
+\begin{figure}
+\small
+\begin{lstlisting}[language=Python]
+import random
+def interp_key(grammar, key):
+   rules = grammar[key]
+   if rules:  return interp_rule(grammar, choose_one(rules)) 
+   else: return [key]
+
+def interp_rule(grammar, rule):
+    return sum([interp_key(grammar, t) for t in rule], [])
+
+\end{lstlisting}
+\caption{A simple Grammar Fuzzer}
+\label{fig:grammarfuzzer}
+\end{figure}
+
+This project investigates...
+...\lipsum[100]
+
+Initial results show that...
+\lipsum[100]
+
+The rest of the thesis is organized as follows: Chapter \ref{chapter:background} details the necessary background. Chapter ... Chapter~\ref{chapter:conclusion} is the conclusion.
